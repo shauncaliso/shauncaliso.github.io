@@ -1,0 +1,36 @@
+---
+import 'C:/Users/Admin/portfolio/src/styles/global.css';
+import Header from 'C:/Users/Admin/portfolio/src/components/Header.astro';
+import Footer from 'C:/Users/Admin/portfolio/src/components/Footer.astro';
+const pageTitle = "Projects";
+---
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+     <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header/>
+     <title>{pageTitle}</title>
+    <h2>This is my Projects page</h2>
+
+    <p>These are my project posts:</p>
+    <ul>
+      <li><a href="/projects/project1/">Project 1</a></li>
+      <li><a href="/projects/project2/">Project 2</a></li>
+      <li><a href="/projects/project3/">Project 3</a></li>
+    </ul>
+
+    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
+
+    <Footer/>
+
+    <script>
+		import "C:/Users/Admin/portfolio/src/scripts/menu.js";
+	</script>
+
+  </body>
+</html>
