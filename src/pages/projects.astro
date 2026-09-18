@@ -1,7 +1,8 @@
 ---
-import 'C:/Users/Admin/portfolio/src/styles/global.css';
-import Header from 'C:/Users/Admin/portfolio/src/components/Header.astro';
-import Footer from 'C:/Users/Admin/portfolio/src/components/Footer.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+const allProjects = Object.values(import.meta.glob('./projects/*.md', { eager: true }));
 const pageTitle = "Projects";
 ---
 
@@ -19,9 +20,7 @@ const pageTitle = "Projects";
 
     <p>These are my project posts:</p>
     <ul>
-      <li><a href="/projects/project1/">Project 1</a></li>
-      <li><a href="/projects/project2/">Project 2</a></li>
-      <li><a href="/projects/project3/">Project 3</a></li>
+      {allProjects.map((project: any) => <li><a href={project.url}>{project.frontmatter.title}</a></li>)} 
     </ul>
 
     <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
